@@ -39,11 +39,12 @@ public class Main {
         
         //ps.ajouterPst(p);
         //ps.modifier(g, 5);
-        //System.out.println( ps.afficher() );
+        System.out.println( ps.afficher() );
         //ps.supprimer(9);
         
-        cps.ajouter(cp1);
-        System.out.println( cps.afficher() );
+        //cps.ajouter(cp1);
+        //cps.supprimer(4);
+        //System.out.println( cps.afficher() );
 
        //cs.ajouterCmd(c); 
        //cs.modifier(c2,8);

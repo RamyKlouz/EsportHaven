@@ -33,7 +33,7 @@ public class Produit {
         this.type = type;
     }
 
-    public Produit(String nom, String marque, String type, int quantite,int prix) {
+    public Produit(String nom, String type, String marque, int quantite,int prix) {
         this.nom = nom;
         this.marque = marque;
         this.type = type;
@@ -41,11 +41,11 @@ public class Produit {
         this.prix = prix;
     }
     
-    public int getId() {
+    public int getProductId() {
         return productID;
     }
 
-    public void setId(int productID) {
+    public void setProductId(int productID) {
         this.productID = productID;
     }
 

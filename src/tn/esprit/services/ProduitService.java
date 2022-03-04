@@ -39,14 +39,15 @@ public class ProduitService implements IService<Produit>{
     }
     
     
-    public void ajouterPst(Produit p){
+    public void ajouterPst(Produit p) {
         String req = "INSERT INTO `produit` (`nom`, `type`, `marque`, `quantite`,`prix`) VALUES (?,?,?,?,?)";
-        
+
         try {
             pst = conn.prepareStatement(req);
             pst.setString(1, p.getNom());
-            pst.setString(2, p.getMarque());
-            pst.setString(3, p.getType());            
+            pst.setString(2, p.getType());
+            pst.setString(3, p.getMarque());
+
             pst.setInt(4, p.getQuantite());
             pst.setInt(5, p.getPrix());
             pst.executeUpdate();
@@ -68,11 +69,38 @@ public class ProduitService implements IService<Produit>{
             
             while(rs.next()){
                 Produit p = new Produit();
-                p.setId( rs.getInt("productID") );
+                p.setProductId( rs.getInt("productID") );
                 p.setNom(rs.getString(2));
-                p.setMarque(rs.getString(3));
-                p.setType(rs.getString(4));
+                p.setMarque(rs.getString(4));
+                p.setType(rs.getString(3));
                 p.setQuantite(rs.getInt(5));
+                p.setPrix(rs.getInt(6));
+                produits.add(p);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+        
+        return produits;
+    }
+    
+    public List<Produit> afficherObs(){
+        List<Produit> produits = new ArrayList<>();
+        
+        String req = "SELECT * from `produit`";
+        
+        try {
+            pst = conn.prepareStatement(req);
+            ResultSet rs= pst.executeQuery();
+            
+            while(rs.next()){
+                Produit p = new Produit();
+                p.setProductId(rs.getInt(1));
+                p.setNom(rs.getString(2));
+                p.setMarque(rs.getString(4));
+                p.setType(rs.getString(3));
+                p.setQuantite(rs.getInt("quantite"));
                 p.setPrix(rs.getInt(6));
                 produits.add(p);
             }
@@ -98,7 +126,7 @@ public class ProduitService implements IService<Produit>{
 
     @Override
     public void modifier(Produit p, int id) {
-        String req = "UPDATE `produit` SET `nom`='"+ p.getNom() +"' ,`marque`='"+ p.getMarque() +"',`type`='"+ p.getType() +"',`quantite`='"+ p.getQuantite()+"',`prix`='"+ p.getPrix() +"' WHERE productID=" + id +";";
+        String req = "UPDATE `produit` SET `nom`='"+ p.getNom()+"',`type`='"+ p.getType() +"' ,`marque`='"+ p.getMarque()  +"',`quantite`='"+ p.getQuantite()+"',`prix`='"+ p.getPrix() +"' WHERE productID=" + id +";";
         try {
             ste = conn.createStatement();
             ste.executeUpdate(req);
