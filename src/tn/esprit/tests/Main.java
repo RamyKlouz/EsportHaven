@@ -11,7 +11,9 @@ import java.io.InputStreamReader;
 import tn.esprit.entities.Produit;
 import tn.esprit.services.ProduitService;
 import tn.esprit.entities.Commande;
+import tn.esprit.entities.CommandeProduit;
 import tn.esprit.services.CommandeService;
+import tn.esprit.services.CPService;
 import tn.esprit.utils.Datasource;
 
 /**
@@ -28,22 +30,27 @@ public class Main {
         
         ProduitService ps = new ProduitService();
         CommandeService cs = new CommandeService();
-        Produit p = new Produit("pull rouge","Nike","vetement",40);
-        Produit g = new Produit("pull orange","Adidas","vetement",30);
+        CPService cps = new CPService();
+        Produit p = new Produit("pull rouge","vetement","Nike",40,6);
+        Produit g = new Produit("pull orange","Adidas","vetement",30,10);
         Commande c = new Commande("Taher",3,10);
         Commande c2 = new Commande("Maher",5,20);
-        //ps.modifier(g, 5);
+        CommandeProduit cp1 = new CommandeProduit(1,2,50,60);
+        
         //ps.ajouterPst(p);
+        //ps.modifier(g, 5);
         //System.out.println( ps.afficher() );
         //ps.supprimer(9);
         
-        //ps.ajouterPst(p); 
-        
+        cps.ajouter(cp1);
+        System.out.println( cps.afficher() );
+
+       //cs.ajouterCmd(c); 
        //cs.modifier(c2,8);
-       //cs.ajouterCmd(c);
-       cs.supprimer(10);
-       // System.out.println( ps.afficher() );
+       //cs.supprimer(10);
        //System.out.println(cs.afficher());
+       
+       
     }
     
 }

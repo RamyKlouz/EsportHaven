@@ -14,13 +14,15 @@ public class Produit {
     private String type;
     private String marque;
     private int quantite;
+    private int prix;
 
-    public Produit(int productID, String nom, String type,String marque, int quantite) {
+    public Produit(int productID, String nom, String type,String marque, int quantite,int prix) {
         this.productID = productID;
         this.nom = nom;
         this.type = type;
         this.marque = marque;
         this.quantite = quantite;
+        this.prix=prix;
     }
 
     public Produit() {
@@ -31,11 +33,12 @@ public class Produit {
         this.type = type;
     }
 
-    public Produit(String nom, String marque, String type, int quantite) {
+    public Produit(String nom, String marque, String type, int quantite,int prix) {
         this.nom = nom;
         this.marque = marque;
         this.type = type;
         this.quantite = quantite;
+        this.prix = prix;
     }
     
     public int getId() {
@@ -48,8 +51,9 @@ public class Produit {
 
     @Override
     public String toString() {
-        return "Produit{" + "id=" + productID + ", nom=" + nom +
-                ", type=" + type + ", marque=" + marque + ", quantite=" + quantite + '}';
+        return "Produit{" + "productID=" + productID + ", nom=" +
+                nom + ", type=" + type + ", marque=" +
+                marque + ", quantite=" + quantite + ", prix=" + prix + '}';
     }
 
     public String getNom() {
@@ -82,6 +86,14 @@ public class Produit {
 
     public int getQuantite() {
         return quantite;
+    }
+
+    public int getPrix() {
+        return prix;
+    }
+
+    public void setPrix(int prix) {
+        this.prix = prix;
     }
     
     

@@ -27,7 +27,7 @@ public class ProduitService implements IService<Produit>{
     
   //  @Override
     public void ajouter(Produit p){
-        String req = "INSERT INTO `produit` (`nom`, `marque`, `type`, `quantite`) VALUES ('"+ p.getNom() +"','"+ p.getMarque() +"','"+ p.getType()+ "','"+ p.getQuantite() +"')";
+        String req = "INSERT INTO `produit` (`nom`, `marque`, `type`, `quantite`,`prix`) VALUES ('"+ p.getNom() +"','"+ p.getMarque() +"','"+ p.getType()+ "','"+ p.getQuantite() + "','"+ p.getPrix() +"')";
         
         try {
             ste = conn.createStatement();
@@ -40,7 +40,7 @@ public class ProduitService implements IService<Produit>{
     
     
     public void ajouterPst(Produit p){
-        String req = "INSERT INTO `produit` (`nom`, `type`, `marque`, `quantite`) VALUES (?,?,?,?)";
+        String req = "INSERT INTO `produit` (`nom`, `type`, `marque`, `quantite`,`prix`) VALUES (?,?,?,?,?)";
         
         try {
             pst = conn.prepareStatement(req);
@@ -48,6 +48,7 @@ public class ProduitService implements IService<Produit>{
             pst.setString(2, p.getMarque());
             pst.setString(3, p.getType());            
             pst.setInt(4, p.getQuantite());
+            pst.setInt(5, p.getPrix());
             pst.executeUpdate();
             System.out.println("produit ajouté");
         } catch (SQLException ex) {
@@ -72,6 +73,7 @@ public class ProduitService implements IService<Produit>{
                 p.setMarque(rs.getString(3));
                 p.setType(rs.getString(4));
                 p.setQuantite(rs.getInt(5));
+                p.setPrix(rs.getInt(6));
                 produits.add(p);
             }
         } catch (SQLException ex) {
@@ -96,7 +98,7 @@ public class ProduitService implements IService<Produit>{
 
     @Override
     public void modifier(Produit p, int id) {
-        String req = "UPDATE `produit` SET `nom`='"+ p.getNom() +"' ,`marque`='"+ p.getMarque() +"',`type`='"+ p.getType() +"',`quantite`='"+ p.getQuantite() +"' WHERE productID=" + id +";";
+        String req = "UPDATE `produit` SET `nom`='"+ p.getNom() +"' ,`marque`='"+ p.getMarque() +"',`type`='"+ p.getType() +"',`quantite`='"+ p.getQuantite()+"',`prix`='"+ p.getPrix() +"' WHERE productID=" + id +";";
         try {
             ste = conn.createStatement();
             ste.executeUpdate(req);
