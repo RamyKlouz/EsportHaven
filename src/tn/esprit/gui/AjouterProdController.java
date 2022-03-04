@@ -61,7 +61,8 @@ public class AjouterProdController implements Initializable {
     private TableColumn<Produit, Integer> cprix;
     @FXML
     private TableColumn<Produit, String> ctype;
-    public static int idtomodif;
+        @FXML
+    public static int idtomodif=0;
     //public ObservableList<Produit> dataprod = FXCollections.observableArrayList(ps.afficher());
     
     

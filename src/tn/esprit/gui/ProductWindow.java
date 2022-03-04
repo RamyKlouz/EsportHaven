@@ -31,7 +31,7 @@ public class ProductWindow extends Application {
         
         try {
             Parent root = FXMLLoader.load(getClass().getResource("AjouterProd.fxml"));
-            Scene scene = new Scene(root, 600, 500);
+            Scene scene = new Scene(root, 600, 550);
 
             primaryStage.setTitle("Hello World!");
             primaryStage.setScene(scene);
