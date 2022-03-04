@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/mainModipartie.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/services/TournoisService.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/mainpartieajoumodif.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/entities/Equipe.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/Tournois.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/AjouterTournoisController.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/AffiDelTournoisController.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/DelAffMain.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/AjouterTournois.fxml</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/AffiDelTournois.fxml</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/services/PartieService.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/DeleteAfficherPartie.fxml</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/ModifPartie.fxml</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/AjouModifPartie.fxml</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/entities/Tournois.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/tests/TestClass.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/AjouModifPartieController.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/mainDelAffPartie.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/DeleteAfficherPartieController.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/gui/ModifPartieController.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/Pidev/GestTournois/src/tn/esports/entities/Partie.java</file>
+        </group>
+    </open-files>
+</project-private>
