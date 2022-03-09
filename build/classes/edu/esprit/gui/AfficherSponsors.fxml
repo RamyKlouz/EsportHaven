@@ -10,23 +10,18 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.AfficherSponsorsController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.AfficherSponsorsController">
    <children>
       <AnchorPane id="AnchorPane" layoutY="-6.0" prefHeight="815.0" prefWidth="1272.0" style="-fx-background-color: #DFF3FB;">
          <children>
-            <TextField fx:id="inputRech" layoutX="413.0" layoutY="124.0" prefHeight="53.0" prefWidth="360.0" />
-            <Button fx:id="supp" layoutX="683.0" layoutY="704.0" mnemonicParsing="false" onAction="#supp" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #DC143C;" text="Supprimer" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="supp1" layoutX="510.0" layoutY="704.0" mnemonicParsing="false" onAction="#Modif" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #1E7FCB;" text="Modifier" textFill="WHITE">
+            <TextField fx:id="inputRech" layoutX="412.0" layoutY="209.0" prefHeight="53.0" prefWidth="360.0" />
+            <Button fx:id="supp" layoutX="560.0" layoutY="744.0" mnemonicParsing="false" onAction="#supp" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #DC143C;" text="Supprimer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="509.0" layoutX="28.0" layoutY="209.0" stroke="BLACK" strokeType="INSIDE" width="336.0" />
-            <Button fx:id="Ajouter" layoutX="868.0" layoutY="704.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #32CD32;" text="Ajouter" textFill="WHITE">
+            <Button fx:id="Ajouter" layoutX="713.0" layoutY="744.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #32CD32;" text="Ajouter" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -46,16 +41,19 @@
                   <Font name="System Bold" size="19.0" />
                </font>
             </Hyperlink>
-            <TableView fx:id="tableview" layoutX="413.0" layoutY="215.0" prefHeight="442.0" prefWidth="775.0">
+            <TableView fx:id="tableview" layoutX="412.0" layoutY="277.0" prefHeight="442.0" prefWidth="418.0">
               <columns>
-                <TableColumn fx:id="ID_Sponsor" prefWidth="75.0" text="ID_Sponsor" />
-                <TableColumn fx:id="Nom_Sponsor" prefWidth="75.0" text="Nom_Sponsor" />
-                  <TableColumn fx:id="Prenom_Sponsor" prefWidth="75.0" text="Prenom_Sponsor" />
-                  <TableColumn fx:id="Montant" prefWidth="75.0" text="Montant" />
-                  <TableColumn fx:id="Duree_spons" prefWidth="75.0" text="Duree_spons" />
-                  <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="Nom_Sponsor" prefWidth="112.80001831054688" text="Nom_Sponsor" />
+                  <TableColumn fx:id="Prenom_Sponsor" prefWidth="110.39996337890625" text="Prenom_Sponsor" />
+                  <TableColumn fx:id="Montant" minWidth="2.4000244140625" prefWidth="76.0" text="Montant" />
+                  <TableColumn fx:id="Duree_spons" prefWidth="118.39996337890625" text="Duree_spons" />
               </columns>
             </TableView>
+            <Button fx:id="supp1" layoutX="412.0" layoutY="744.0" mnemonicParsing="false" onAction="#Modif" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #1E7FCB;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

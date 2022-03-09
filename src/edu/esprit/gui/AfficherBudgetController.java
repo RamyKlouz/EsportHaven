@@ -85,7 +85,7 @@ public class AfficherBudgetController implements Initializable {
         ObservableList<budget> obs2 = FXCollections.observableArrayList(c);
         tableview.setItems(obs2);
         
-        ID_Budget.setCellValueFactory(new PropertyValueFactory<>("ID_Budget"));
+
  Activite.setCellValueFactory(new PropertyValueFactory<>("Activite"));
         Sponsor.setCellValueFactory(new PropertyValueFactory<>("sponsors"));
         Montant.setCellValueFactory(new PropertyValueFactory<>("Montant"));
@@ -138,9 +138,9 @@ public class AfficherBudgetController implements Initializable {
                TrayNotification tray = new TrayNotification();
             AnimationType type = AnimationType.POPUP;
             tray.setAnimationType(type);
-            tray.setTitle("Vous avez Supprimé un budget!");
+            tray.setTitle("Vous avez Supprimé un budget ");
             tray.setMessage("");
-            tray.setNotificationType(NotificationType.WARNING);
+            tray.setNotificationType(NotificationType.SUCCESS);
             tray.showAndDismiss(Duration.millis(3000));
         
     }

@@ -88,9 +88,7 @@ public class AfficherSponsorsController implements Initializable {
         
         ObservableList<Sponsors> obs2 = FXCollections.observableArrayList(c);
         tableview.setItems(obs2);
-        
-        ID_Sponsor.setCellValueFactory(new PropertyValueFactory<>("ID_Sponsor"));
-        
+      
  Nom_Sponsor.setCellValueFactory(new PropertyValueFactory<>("Nom_Sponsor"));
         Prenom_Sponsor.setCellValueFactory(new PropertyValueFactory<>("Prenom_Sponsor"));
         
@@ -149,9 +147,9 @@ public class AfficherSponsorsController implements Initializable {
                TrayNotification tray = new TrayNotification();
             AnimationType type = AnimationType.POPUP;
             tray.setAnimationType(type);
-            tray.setTitle("Vous avez Supprimé un Sponsor!");
+            tray.setTitle("Vous avez Supprimé un Sponsor");
             tray.setMessage("");
-            tray.setNotificationType(NotificationType.WARNING);
+            tray.setNotificationType(NotificationType.SUCCESS);
             tray.showAndDismiss(Duration.millis(3000));
         
     }
