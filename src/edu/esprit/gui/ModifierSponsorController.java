@@ -28,7 +28,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author fares
+ * @author sk4nd
  */
 public class ModifierSponsorController implements Initializable {
 

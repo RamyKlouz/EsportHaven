@@ -29,6 +29,7 @@ public class NewFXMain extends Application {
     public void start(Stage primaryStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("AfficherSponsors.fxml"));
+            //Parent root = FXMLLoader.load(getClass().getResource("UserAffichage.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.show();

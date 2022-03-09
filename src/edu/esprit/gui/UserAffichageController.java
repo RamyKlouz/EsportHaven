@@ -4,14 +4,13 @@
  * and open the template in the editor.
  */
 package edu.esprit.gui;
+
 import edu.esprit.crud.SponsorsCRUD;
 import edu.esprit.entities.Sponsors;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLDataException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
 import java.util.logging.Level;
@@ -34,30 +33,17 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-import tray.animations.AnimationType;
-import tray.notification.NotificationType;
-import tray.notification.TrayNotification;
 
 /**
  * FXML Controller class
  *
  * @author sk4nd
  */
-public class AfficherSponsorsController implements Initializable {
-
+public class UserAffichageController implements Initializable {
     @FXML
     private TextField inputRech;
     @FXML
-    private Button supp;
-    @FXML
-    private Button supp1;
-    @FXML
-    private Button Ajouter;
-    @FXML
     private TableView<Sponsors> tableview;
-    @FXML
-    private TableColumn<Sponsors, Integer> ID_Sponsor;
     @FXML
     private TableColumn<Sponsors, String> Nom_Sponsor;
     @FXML
@@ -78,7 +64,8 @@ public class AfficherSponsorsController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-          SponsorsCRUD pss = new SponsorsCRUD();
+        // TODO
+        SponsorsCRUD pss = new SponsorsCRUD();
         ArrayList<Sponsors> c = new ArrayList<>();
         try {
             c = (ArrayList<Sponsors>) pss.AfficherSponsors();
@@ -119,81 +106,15 @@ public class AfficherSponsorsController implements Initializable {
                 sortedData.comparatorProperty().bind(tableview.comparatorProperty());
                 tableview.setItems(sortedData);
             });
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         
         // TODO
-    }   
-    
-       public void resetTableData() throws SQLDataException, SQLException {
-
-        List<Sponsors> listsponsors = new ArrayList<>();
-        listsponsors = cs.AfficherSponsor();
-        ObservableList<Sponsors> data = FXCollections.observableArrayList(listsponsors);
-        tableview.setItems(data);
-    }    
-    
-
-    @FXML
-    private void supp(ActionEvent event) throws SQLException {
-              if (event.getSource() == supp) {
-            Sponsors e = new Sponsors();
-            e.setID_Sponsor(tableview.getSelectionModel().getSelectedItem().getID_Sponsor());  
-            SponsorsCRUD cs = new SponsorsCRUD();
-            cs.SupprimerSponsor(e);
-            resetTableData();  
-        
-               TrayNotification tray = new TrayNotification();
-            AnimationType type = AnimationType.POPUP;
-            tray.setAnimationType(type);
-            tray.setTitle("Vous avez Supprimé un Sponsor!");
-            tray.setMessage("");
-            tray.setNotificationType(NotificationType.WARNING);
-            tray.showAndDismiss(Duration.millis(3000));
-        
-    }
-        
-        
-        
-    }
-
-    @FXML
-    private void Modif(ActionEvent event) throws IOException {
-              SponsorsCRUD ps = new SponsorsCRUD();
-        Sponsors c = new Sponsors(tableview.getSelectionModel().getSelectedItem().getID_Sponsor(),
-                tableview.getSelectionModel().getSelectedItem().getNom_Sponsor(),
-                tableview.getSelectionModel().getSelectedItem().getPrenom_Sponsor(),
-                 tableview.getSelectionModel().getSelectedItem().getMontant(),
-                tableview.getSelectionModel().getSelectedItem().getDuree_spons()
-               
-                
-                );
-        AfficherSponsorsController.connectedSponsor = c;
-        
-             Parent page1 = FXMLLoader.load(getClass().getResource("ModifierSponsor.fxml"));
-        Scene scene = new Scene(page1, 1144, 741);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-        
-        
-    }
-
-    @FXML
-    private void Ajouter(ActionEvent event) throws IOException {
-        
-               Parent page1 = FXMLLoader.load(getClass().getResource("AjouterSponsor.fxml"));
-        Scene scene = new Scene(page1);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Liste des Evenements");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
+    }       
+        @FXML
     private void spon(ActionEvent event) throws IOException {
-               Parent page1 = FXMLLoader.load(getClass().getResource("AfficherSponsors.fxml"));
+               Parent page1 = FXMLLoader.load(getClass().getResource("UserAffichage.fxml"));
         Scene scene = new Scene(page1);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Liste des Evenements");
@@ -202,22 +123,4 @@ public class AfficherSponsorsController implements Initializable {
         
         
     }
-
-    @FXML
-    private void budg(ActionEvent event) throws IOException {
-          Parent page1 = FXMLLoader.load(getClass().getResource("AfficherBudget.fxml"));
-        Scene scene = new Scene(page1);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Liste des Evenements");
-        stage.setScene(scene);
-        stage.show();  
-        
-        
-    }
-        
-        
-    }
-    
-    
-    
-    
+}

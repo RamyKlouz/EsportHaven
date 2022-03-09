@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.UserAffichageController">
+   <children>
+      <AnchorPane layoutX="3.0" prefHeight="651.0" prefWidth="894.0" style="-fx-background-color: #EFEEF3;">
+         <children>
+            <TableView layoutX="382.0" layoutY="183.0" prefHeight="436.0" prefWidth="466.0">
+              <columns>
+                <TableColumn fx:id="Nom_Sponsor" prefWidth="134.40000915527344" text="Nom Sponsor" />
+                <TableColumn fx:id="Prenom_Sponsor" prefWidth="117.5999755859375" text="Prenom Sponsor" />
+                  <TableColumn fx:id="Montant" minWidth="0.0" prefWidth="71.20001220703125" text="Montant" />
+                  <TableColumn fx:id="Duree_spons" minWidth="0.0" prefWidth="140.79996337890623" text="Duree Sponsorisation" />
+              </columns>
+            </TableView>
+            <Label layoutX="330.0" text="Sponsors" textFill="#471574">
+               <font>
+                  <Font name="Californian FB Bold" size="60.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="509.0" layoutX="28.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" width="336.0" />
+            <Hyperlink fx:id="spon" layoutX="127.0" layoutY="326.0" onAction="#spon" prefHeight="38.0" prefWidth="137.0" text="Les sponsors" textFill="#401535">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Hyperlink>
+            <TextField fx:id="inputRech" layoutX="382.0" layoutY="111.0" prefHeight="53.0" prefWidth="360.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

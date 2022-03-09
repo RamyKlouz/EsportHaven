@@ -38,7 +38,7 @@ import tray.notification.TrayNotification;
 /**
  * FXML Controller class
  *
- * @author fares
+ * @author sk4nd
  */
 public class AjouterBudgetController implements Initializable {
  public AjouterBudgetController() throws IOException, SQLException, NoSuchAlgorithmException {

@@ -12,31 +12,31 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.AfficherSponsorsController">
    <children>
-      <AnchorPane id="AnchorPane" layoutY="-6.0" prefHeight="815.0" prefWidth="1272.0" style="-fx-background-color: #DFF3FB;">
+      <AnchorPane id="AnchorPane" layoutY="-6.0" prefHeight="815.0" prefWidth="1272.0" style="-fx-background-color: #EFEEF3;">
          <children>
             <TextField fx:id="inputRech" layoutX="412.0" layoutY="209.0" prefHeight="53.0" prefWidth="360.0" />
-            <Button fx:id="supp" layoutX="560.0" layoutY="744.0" mnemonicParsing="false" onAction="#supp" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #DC143C;" text="Supprimer" textFill="WHITE">
+            <Button fx:id="supp" layoutX="560.0" layoutY="744.0" mnemonicParsing="false" onAction="#supp" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #FF0066;" text="Supprimer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="509.0" layoutX="28.0" layoutY="209.0" stroke="BLACK" strokeType="INSIDE" width="336.0" />
-            <Button fx:id="Ajouter" layoutX="713.0" layoutY="744.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #32CD32;" text="Ajouter" textFill="WHITE">
+            <Button fx:id="Ajouter" layoutX="713.0" layoutY="744.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #471574;" text="Ajouter" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Label layoutX="370.0" layoutY="29.0" text="Gestion des Sponsors" textFill="#bc0909">
+            <Label layoutX="370.0" layoutY="29.0" text="Gestion des Sponsors" textFill="#471574">
                <font>
                   <Font name="Californian FB Bold" size="60.0" />
                </font>
             </Label>
-            <Hyperlink fx:id="spon" layoutX="89.0" layoutY="277.0" onAction="#spon" prefHeight="38.0" prefWidth="216.0" text="Gestion des Sponsors">
+            <Hyperlink fx:id="spon" layoutX="88.0" layoutY="388.0" onAction="#spon" prefHeight="38.0" prefWidth="216.0" text="Gestion des Sponsors" textFill="#401535">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="budg" layoutX="89.0" layoutY="370.0" onAction="#budg" text="Gestion des budgets">
+            <Hyperlink fx:id="budg" layoutX="89.0" layoutY="446.0" onAction="#budg" text="Gestion des budgets" textFill="#401535">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
@@ -49,7 +49,7 @@
                   <TableColumn fx:id="Duree_spons" prefWidth="118.39996337890625" text="Duree_spons" />
               </columns>
             </TableView>
-            <Button fx:id="supp1" layoutX="412.0" layoutY="744.0" mnemonicParsing="false" onAction="#Modif" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #1E7FCB;" text="Modifier" textFill="WHITE">
+            <Button fx:id="supp1" layoutX="412.0" layoutY="744.0" mnemonicParsing="false" onAction="#Modif" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #401535;" text="Modifier" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

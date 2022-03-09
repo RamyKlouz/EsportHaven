@@ -40,7 +40,7 @@ import tray.notification.TrayNotification;
 /**
  * FXML Controller class
  *
- * @author fares
+ * @author sk4nd
  */
 public class ModifierBudgetController implements Initializable {
 
@@ -151,8 +151,15 @@ public class ModifierBudgetController implements Initializable {
         
     }
 
-    @FXML
-    private void prec(ActionEvent event) {
+     @FXML
+    private void prec(ActionEvent event) throws IOException {
+      Parent page1 = FXMLLoader.load(getClass().getResource("AfficherSponsors.fxml"));
+        Scene scene = new Scene(page1);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Liste des Sponsors");
+        stage.setScene(scene);
+        stage.show();  
+        
     }
     
 }

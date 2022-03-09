@@ -43,7 +43,7 @@ import javax.mail.internet.MimeMessage;
 /**
  * FXML Controller class
  *
- * @author fares
+ * @author sk4nd
  */
 public class AjouterSponsorController implements Initializable {
 
@@ -134,8 +134,16 @@ public class AjouterSponsorController implements Initializable {
     }
 
     @FXML
-    private void prec(ActionEvent event) {
+    private void prec(ActionEvent event) throws IOException {
+      Parent page1 = FXMLLoader.load(getClass().getResource("AfficherSponsors.fxml"));
+        Scene scene = new Scene(page1);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Liste des Sponsors");
+        stage.setScene(scene);
+        stage.show();  
+        
     }
+    
     
     
         private static Message prepareMessage(Session session, String myAccountEmail, String recipient) {

@@ -43,7 +43,7 @@ import tray.notification.TrayNotification;
 /**
  * FXML Controller class
  *
- * @author fares
+ * @author sk4nd
  */
 public class AfficherBudgetController implements Initializable {
 
@@ -138,9 +138,9 @@ public class AfficherBudgetController implements Initializable {
                TrayNotification tray = new TrayNotification();
             AnimationType type = AnimationType.POPUP;
             tray.setAnimationType(type);
-            tray.setTitle("Vous avez Supprimé un budget ");
+            tray.setTitle("Vous avez Supprimé un budget!");
             tray.setMessage("");
-            tray.setNotificationType(NotificationType.SUCCESS);
+            tray.setNotificationType(NotificationType.WARNING);
             tray.showAndDismiss(Duration.millis(3000));
         
     }
