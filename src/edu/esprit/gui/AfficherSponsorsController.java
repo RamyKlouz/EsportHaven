@@ -66,6 +66,15 @@ public class AfficherSponsorsController implements Initializable {
     private TableColumn<Sponsors, Integer> Montant;
     @FXML
     private TableColumn<Sponsors, Integer> Duree_spons;
+    
+    
+    
+    private ObservableList<Sponsors> RecData = FXCollections.observableArrayList();
+    public static int idL = 0 ;
+   
+    
+    
+    
  public ObservableList<Sponsors> list;
   public static Sponsors connectedSponsor;
   SponsorsCRUD cs = new SponsorsCRUD();
@@ -73,11 +82,15 @@ public class AfficherSponsorsController implements Initializable {
     private Hyperlink spon;
     @FXML
     private Hyperlink budg;
+    @FXML
+    private TextField recherche;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+      
           SponsorsCRUD pss = new SponsorsCRUD();
         ArrayList<Sponsors> c = new ArrayList<>();
         try {
@@ -85,11 +98,23 @@ public class AfficherSponsorsController implements Initializable {
         } catch (SQLException ex) {
             Logger.getLogger(AfficherSponsorsController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        ///////////
+           List<Sponsors> listRec= new ArrayList<Sponsors>();
+        SponsorsCRUD rs =  new SponsorsCRUD();
+     
+        RecData.clear();
+        RecData.addAll(c);
+        tableview.setItems(RecData);
+        
+        
+        
+        
+        //////////
         
         ObservableList<Sponsors> obs2 = FXCollections.observableArrayList(c);
         tableview.setItems(obs2);
         
-        ID_Sponsor.setCellValueFactory(new PropertyValueFactory<>("ID_Sponsor"));
+  //      ID_Sponsor.setCellValueFactory(new PropertyValueFactory<>("ID_Sponsor"));
         
  Nom_Sponsor.setCellValueFactory(new PropertyValueFactory<>("Nom_Sponsor"));
         Prenom_Sponsor.setCellValueFactory(new PropertyValueFactory<>("Prenom_Sponsor"));
@@ -124,8 +149,7 @@ public class AfficherSponsorsController implements Initializable {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        
-        // TODO
+         
     }   
     
        public void resetTableData() throws SQLDataException, SQLException {
@@ -217,7 +241,7 @@ public class AfficherSponsorsController implements Initializable {
         
     }
         
-        
+     
     }
     
     

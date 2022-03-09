@@ -65,6 +65,7 @@ public class BudgetCRUD {
                 Bd.setID_Budget(rs.getInt(1));
                 Bd.setMontant(rs.getInt(2));
                 Bd.setActivite(rs.getString("Activite"));
+ 
                  /*
                    Panier p = new Panier();
                 int j = rs.getInt("idpanier");
@@ -73,8 +74,14 @@ public class BudgetCRUD {
                 
                 Sponsors p = new Sponsors();
                 int j = rs.getInt("ID_Sponsor");
-                p.setID_Sponsor(j);
-                Bd.setSponsors(p);
+                    
+                        p.setID_Sponsor(j);
+                        p.getNom_Sponsor();
+                        
+                String ppp = rs.getString("NOMSP");
+                        
+                        
+                        Bd.setSponsors(p);
                 
                 
                 

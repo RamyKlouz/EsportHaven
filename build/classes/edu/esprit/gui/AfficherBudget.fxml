@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.AfficherBudgetController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.AfficherBudgetController">
    <children>
       <AnchorPane id="AnchorPane" prefHeight="819.0" prefWidth="1282.0" style="-fx-background-color: #DFF3FB;">
          <children>
@@ -36,9 +36,8 @@
                   <Font name="Californian FB Bold" size="60.0" />
                </font>
             </Label>
-            <TableView fx:id="tableview" layoutX="393.0" layoutY="209.0" prefHeight="479.0" prefWidth="830.0">
+            <TableView fx:id="tableview" layoutX="393.0" layoutY="209.0" prefHeight="479.0" prefWidth="584.0">
                <columns>
-                  <TableColumn fx:id="ID_Budget" prefWidth="249.0" text="ID_Budget" />
                   <TableColumn fx:id="Montant" prefWidth="150.0" text="Montant" />
                   <TableColumn fx:id="Activite" prefWidth="217.0" text="Activite" />
                   <TableColumn fx:id="Sponsor" prefWidth="213.0" text="Sponsor" />

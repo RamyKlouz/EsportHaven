@@ -39,7 +39,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="155.0" layoutY="312.0" text="Duree_spons">
+            <Label layoutX="155.0" layoutY="312.0" text="Nom Sponsor">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
