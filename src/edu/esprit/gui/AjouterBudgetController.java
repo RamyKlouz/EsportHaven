@@ -77,6 +77,7 @@ public class AjouterBudgetController implements Initializable {
                 Integer xx = rst.getInt("ID_Sponsor");
                 
                 Sponsorss.getItems().add(xx);
+                
             }
 
         } catch (SQLException ex) {

@@ -3,20 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/entities/budget.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/gui/AfficherBudgetController.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/crud/BudgetCRUD.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/gui/AfficherSponsorsController.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/gui/ModifierBudgetController.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/utils/MyConnexion.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/crud/SponsorsCRUD.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/gui/ModifierSponsorController.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/gui/AjouterBudgetController.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/gui/AfficherBudget.fxml</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/bd_sponsors/BD_Sponsors.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/gui/NewFXMain.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/entities/Sponsors.java</file>
-            <file>file:/C:/Users/sk4nd/OneDrive/Documents/NetBeansProjects/BD_Sponsors/src/edu/esprit/gui/AjouterSponsorController.java</file>
+            <file>file:/C:/Users/fares/Desktop/skander/BD_Sponsors/src/edu/esprit/gui/ModifierSponsorController.java</file>
+            <file>file:/C:/Users/fares/Desktop/skander/BD_Sponsors/src/edu/esprit/entities/Sponsors.java</file>
+            <file>file:/C:/Users/fares/Desktop/skander/BD_Sponsors/src/edu/esprit/gui/AfficherSponsorsController.java</file>
+            <file>file:/C:/Users/fares/Desktop/skander/BD_Sponsors/src/edu/esprit/crud/SponsorsCRUD.java</file>
         </group>
     </open-files>
 </project-private>
