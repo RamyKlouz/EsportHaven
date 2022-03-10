@@ -29,7 +29,7 @@ public class Gestiontour extends Application {
          try {
             Parent root = FXMLLoader.load(getClass().getResource("/GUI/afficherpartie.fxml"));
             Scene scene = new Scene(root);
-            primaryStage.setTitle("gestion forum");
+            primaryStage.setTitle("gestion Tournois");
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException ex) {
