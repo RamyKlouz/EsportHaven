@@ -18,8 +18,10 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import services.TournoisService;
 import entities.Tournois;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import org.controlsfx.control.Notifications;
+import utils.Mail;
 /**
  * FXML Controller class
  *
@@ -51,26 +53,37 @@ public class AjouterTournoisController implements Initializable {
 
     @FXML
     private void SaveTournois(ActionEvent event) {
-        Notifications notificationBuilder = Notifications.create()
-                .title("Tournoi ajoutée")
-                .text("Tournoi ajoutée");
-        notificationBuilder.showConfirm();
-               
-               
-                
-        String nom = tfNom.getText();
+
+              
+             if (  tfNom.getText().isEmpty() ||tfJeu.getText().isEmpty() || tfNbEq.getText().isEmpty())
+             {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Please Fill All DATA");
+            alert.showAndWait();
+
+        } else   {
+                  String nom = tfNom.getText();
         Date date_deb = Date.valueOf(tfDateDeb.getValue());
         Date date_fin = Date.valueOf(tfDateFin.getValue());
         String jeux = tfJeu.getText();
         int nb_equipes = Integer.parseInt(tfNbEq.getText());
+                
         
         Tournois t = new Tournois(nom, date_deb, date_fin, nb_equipes, jeux);
+                         System.out.println(t);
+
         TournoisService ts = new TournoisService();
         ts.ajouter(t);
+           
+         Notifications notificationBuilder = Notifications.create()
+                .title("Tournoi ajoutée")
+                .text("Tournoi ajoutée");
+        notificationBuilder.showConfirm();
         Stage stage = (Stage) tfid.getScene().getWindow();
                 stage.close();
     }
 
-    
+    }
     
 }

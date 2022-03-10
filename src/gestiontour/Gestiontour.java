@@ -27,11 +27,13 @@ public class Gestiontour extends Application {
     @Override
     public void start(Stage primaryStage) {
          try {
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/afficherpartie.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/GUI/affichertournois.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setTitle("gestion Tournois");
             primaryStage.setScene(scene);
             primaryStage.show();
+            new animatefx.animation.ZoomIn(root).play();
+
         } catch (IOException ex) {
             Logger.getLogger(Gestiontour.class.getName()).log(Level.SEVERE, null, ex);
         }

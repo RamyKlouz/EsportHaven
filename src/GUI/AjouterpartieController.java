@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -53,10 +54,17 @@ public class AjouterpartieController implements Initializable {
 
     @FXML
     private void ajouterpartie(ActionEvent event) {
-          Notifications notificationBuilder = Notifications.create()
-                .title("Match ajoutée")
-                .text("Match ajoutée");
-        notificationBuilder.showConfirm();
+        
+        
+          if ( tfDuree.getText().isEmpty()|| tfsc1.getText().isEmpty() ||tfsc2.getText().isEmpty() || tfideq1.getText().isEmpty()||tfideq2.getText().isEmpty()||tfidtour.getText().isEmpty())
+             {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Please Fill All DATA");
+            alert.showAndWait();
+
+        } else   {
+         
         float duree = Float.parseFloat(tfDuree.getText());
         int score1 = Integer.parseInt(tfsc1.getText());
         int score2 = Integer.parseInt(tfsc2.getText());
@@ -67,6 +75,10 @@ public class AjouterpartieController implements Initializable {
         Partie t = new  Partie(duree,score1,score2,date_deroul,idtour,id_equipe1,id_equipe2) ;
         PartieService ts = new PartieService();
         ts.ajouterPartie(t);
-    }
+         Notifications notificationBuilder = Notifications.create()
+                .title("Match ajoutée")
+                .text("Match ajoutée");
+        notificationBuilder.showConfirm();
+    }   }
     
 }

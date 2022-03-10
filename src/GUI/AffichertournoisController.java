@@ -41,6 +41,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import services.TournoisService;
+import utils.Mail;
 
 /**
  * FXML Controller class
@@ -152,11 +153,14 @@ Tournois tournoi = tvtournoi.getSelectionModel().getSelectedItem();
         if (result.get() == ButtonType.OK) {
             
             st.supprimer(tournoi.getId());
+            
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Delete");
             alert.setHeaderText(null);
             alert.setContentText(" Done!");
             alert.show();
+             System.out.println("attention");
+                 Mail.envoyer("islem.zouari@esprit.tn");
             tvtournoi.setItems(st.afficherobserv());
 
         } else {
@@ -188,7 +192,8 @@ Tournois tournoi = tvtournoi.getSelectionModel().getSelectedItem();
                                     stage.setScene(new Scene(parent));
                                     stage.initStyle(StageStyle.UTILITY);
                                     stage.show();
-                                  //  new animatefx.animation.ZoomIn(parent).play();
+                                     stage.setOnHiding( event2 -> { tvtournoi.setItems(st.afficherobserv());});
+                                  new animatefx.animation.ZoomIn(parent).play();
                                     
                                    
                                
@@ -235,6 +240,8 @@ Tournois tournoi = tvtournoi.getSelectionModel().getSelectedItem();
         stage.show();
         
         stage.setOnHiding( event2 -> { tvtournoi.setItems(st.afficherobserv());});
+                                          new animatefx.animation.ZoomIn(parent).play();
+
     } catch (IOException ex) {
         Logger.getLogger(AffichertournoisController.class.getName()).log(Level.SEVERE, null, ex);
     }

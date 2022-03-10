@@ -14,7 +14,7 @@
         <URL value="@affichertournois.css" />
     </stylesheets>
    <children>
-          <Button fx:id="ajouter" layoutX="55.0" layoutY="111.0" mnemonicParsing="false" onAction="#ajoutertournois" text="Ajouter" />
+          <Button fx:id="ajouter" graphicTextGap="5.0" layoutX="104.0" layoutY="123.0" mnemonicParsing="false" onAction="#ajoutertournois" text="Ajouter un tournoi" />
 
       <TableView fx:id="tvtournoi" layoutX="41.0" layoutY="174.0" prefHeight="459.0" prefWidth="1048.0">
         <columns>
@@ -28,11 +28,12 @@
         </columns>
       </TableView>
       <Label fx:id="nomtop" layoutX="427.0" layoutY="138.0" prefHeight="21.0" prefWidth="138.0" />
-      <Button layoutX="291.0" layoutY="133.0" mnemonicParsing="false" onMouseClicked="#toptour" text="Top Tournois " />
+      <Button layoutX="618.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#toptour" text="Top Tournois " />
       <JFXTextField fx:id="searchComBox" focusColor="#90acff" layoutX="185.0" layoutY="58.0" onKeyReleased="#searchEvent" prefHeight="35.0" prefWidth="882.0" promptText="Search" style="-fx-background-color: #e4e4e4;" unFocusColor="#ffffff00">
          <padding>
             <Insets left="10.0" right="10.0" />
          </padding>
       </JFXTextField>
+      <Label layoutX="873.0" layoutY="128.0" text="Le tournoi le plus populaire ! " textFill="#ff0066" />
    </children>
 </AnchorPane>
