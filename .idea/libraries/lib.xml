@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../java/javafx-sdk-17.0.2/lib" />
+      <root url="jar://$PROJECT_DIR$/java-mail-1.4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../java/javafx-sdk-17.0.2/lib" recursive="false" />
+  </library>
+</component>

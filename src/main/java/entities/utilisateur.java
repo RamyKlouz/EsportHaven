@@ -16,22 +16,26 @@ public class utilisateur {
     private String nom; 
     private String prenom;
     private String email;
-    private int num_tel;
+    private int numtel;
     private String pays;
     private String role;
+    private boolean etat;
+    private boolean banne;
     
     
 
-    public utilisateur(int id,String login,String mdp, String nom, String prenom,String email,int num_tel,String pays,String role) {
+    public utilisateur(int id,String login,String mdp, String nom, String prenom,String email,int numtel,String pays,String role,boolean etat,boolean banne) {
         this.id = id;
         this.login = login;
         this.mdp = mdp;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
-        this.num_tel = num_tel;
+        this.numtel = numtel;
         this.pays = pays;
         this.role = role;
+        this.etat = etat;
+        this.banne = banne;
     }
 
     public utilisateur() {
@@ -46,8 +50,9 @@ public class utilisateur {
         return id;
     }
 
-    public void setId(int id) {
+    public int setId(int id) {
         this.id = id;
+        return id;
     }
   
     public String getLogin() {
@@ -62,8 +67,9 @@ public class utilisateur {
         return mdp;
     }
 
-    public void setMdp(String mdp) {
+    public String setMdp(String mdp) {
         this.mdp = mdp;
+        return mdp;
     }
 
     public String getNom() {
@@ -91,11 +97,11 @@ public class utilisateur {
     }
     
     public int getNumtel() {
-        return num_tel;
+        return numtel;
     }
 
     public void setNumtel(int num_tel) {
-        this.num_tel = num_tel;
+        this.numtel = num_tel;
     }
     
     public String getPays() {
@@ -114,6 +120,28 @@ public class utilisateur {
         this.role = role;
     }
 
+    public Boolean getEtat() {
+        return etat;
+    }
+
+    public boolean isEtat() {
+        return etat;
+    }
+
+    public void setEtat(boolean etat) {
+        this.etat = etat;
+    }
+
+
+
+    public boolean isBanne() {
+        return banne;
+    }
+
+    public void setBanne(boolean banne) {
+        this.banne = banne;
+    }
+
     @Override
     public String toString() {
         return "utilisateur{" +
@@ -123,9 +151,11 @@ public class utilisateur {
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", email='" + email + '\'' +
-                ", num_tel=" + num_tel +
+                ", num_tel=" + numtel +
                 ", pays='" + pays + '\'' +
                 ", role='" + role + '\'' +
+                ", etat='" + etat + '\'' +
+                ", banne='" + banne + '\'' +
                 '}';
     }
 }
