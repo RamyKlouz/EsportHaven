@@ -35,10 +35,13 @@ public class reponse {
     public void setContent(String content) {
         this.content = content;
     }
+<<<<<<< HEAD
 
     public String getDescription() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+=======
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
     
     
 }

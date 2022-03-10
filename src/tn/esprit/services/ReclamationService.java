@@ -11,10 +11,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+<<<<<<< HEAD
 
 import java.util.ArrayList;
 
 import java.util.List;
+=======
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
 
 /**
  *
@@ -26,16 +35,27 @@ public class ReclamationService {
     public void ajouterReclamation2(reclamation r) {
 
         try {
+<<<<<<< HEAD
             String requete = "INSERT INTO reclamation(content,email) values(?,?)";
             PreparedStatement pst = Datasource.getInstance().getCnx().prepareStatement(requete);
             
             pst.setString(1, r.getDescription());
             pst.setString(2, r.getEmail());
+=======
+            String requete = "INSERT INTO reclamation(content) values( ?)";
+            PreparedStatement pst = Datasource.getInstance().getCnx().prepareStatement(requete);
+            
+            pst.setString(2, r.getDescription());
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
            
             pst.executeUpdate();
             System.out.println("Reclamation ajoutée !");
         } catch (SQLException ex) {
+<<<<<<< HEAD
             System.err.println("Database error"+ex.getMessage());
+=======
+            System.err.println(ex.getMessage());
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
         }
 
     }
@@ -92,7 +112,10 @@ public class ReclamationService {
 
         try {
             String requete = "DELETE FROM reclamation where id_rec = ?";
+<<<<<<< HEAD
             
+=======
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
 
             PreparedStatement pst = Datasource.getInstance().getCnx().prepareStatement(requete);
             pst.setInt(1, id);

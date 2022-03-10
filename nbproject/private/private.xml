@@ -3,11 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/waela/OneDrive/Documents/NetBeansProjects/projectPiDev/src/reprec/Reprec.java</file>
             <file>file:/C:/Users/waela/OneDrive/Documents/NetBeansProjects/projectPiDev/src/tn/esprit/entities/reponse.java</file>
             <file>file:/C:/Users/waela/OneDrive/Documents/NetBeansProjects/projectPiDev/src/reprec/ReponseService.java</file>
             <file>file:/C:/Users/waela/OneDrive/Documents/NetBeansProjects/projectPiDev/src/projectpidev/FXMLDocumentController.java</file>
             <file>file:/C:/Users/waela/OneDrive/Documents/NetBeansProjects/projectPiDev/src/tn/esprit/services/ReclamationService.java</file>
+=======
+            <file>file:/C:/Users/waela/OneDrive/Desktop/wokshop_3a5/wokshop_3a5/src/tn/esprit/services/ReclamationService.java</file>
+            <file>file:/C:/Users/waela/OneDrive/Desktop/wokshop_3a5/wokshop_3a5/src/tn/esprit/entities/reponse.java</file>
+            <file>file:/C:/Users/waela/OneDrive/Desktop/wokshop_3a5/wokshop_3a5/src/tn/esprit/entities/reclamation.java</file>
+            <file>file:/C:/Users/waela/OneDrive/Desktop/wokshop_3a5/wokshop_3a5/src/tn/esprit/entities/Personne.java</file>
+            <file>file:/C:/Users/waela/OneDrive/Desktop/wokshop_3a5/wokshop_3a5/src/tn/esprit/entities/IService.java</file>
+            <file>file:/C:/Users/waela/OneDrive/Desktop/wokshop_3a5/wokshop_3a5/src/tn/esprit/services/PersonneService.java</file>
+            <file>file:/C:/Users/waela/OneDrive/Desktop/wokshop_3a5/wokshop_3a5/src/tn/esprit/utils/Datasource.java</file>
+            <file>file:/C:/Users/waela/OneDrive/Desktop/wokshop_3a5/wokshop_3a5/src/tn/esprit/services/ReponseService.java</file>
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
         </group>
     </open-files>
 </project-private>

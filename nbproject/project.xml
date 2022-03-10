@@ -2,6 +2,7 @@
 <project xmlns="http://www.netbeans.org/ns/project/1">
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
+<<<<<<< HEAD
         <buildExtensions xmlns="http://www.netbeans.org/ns/ant-build-extender/1">
             <extension file="jfx-impl.xml" id="jfx3">
                 <dependency dependsOn="-jfx-copylibs" target="-post-jar"/>
@@ -14,6 +15,10 @@
         </buildExtensions>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
             <name>projectPiDev</name>
+=======
+        <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+            <name>wokshop_3a5</name>
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>

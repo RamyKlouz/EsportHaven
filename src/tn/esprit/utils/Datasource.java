@@ -10,7 +10,11 @@ import java.sql.*;
  * @author remo
  */
 public class Datasource {
+<<<<<<< HEAD
     private String url = "jdbc:mysql://localhost:3306/pidev";
+=======
+    private String url = "jdbc:mysql://localhost:8889/pidev";
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
     private String user = "root";
     private String password = "";
 

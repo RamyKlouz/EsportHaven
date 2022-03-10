@@ -12,6 +12,7 @@ public class reclamation {
     private int id;
     
     private String description;
+<<<<<<< HEAD
     
     private String email;
 
@@ -21,6 +22,13 @@ public class reclamation {
         this.description = description;
         
         this.email = email;
+=======
+
+    public reclamation(int id, String description) {
+        this.id = id;
+
+        this.description = description;
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
     }
 
     public reclamation() {
@@ -44,6 +52,7 @@ public class reclamation {
         return "Personne{" + "id=" + id + ", " +   ", descriprion=" + description + '}';
     }
 
+<<<<<<< HEAD
     public String getEmail() {
         return email;
     }
@@ -52,6 +61,8 @@ public class reclamation {
         this.email = email;
     }
 
+=======
+>>>>>>> 2369386a953b614a7e7a1b661b6d06aa78c263ca
    
 
   
