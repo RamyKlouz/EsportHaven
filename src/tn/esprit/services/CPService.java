@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import tn.esprit.entities.CommandeProduit;
 import tn.esprit.entities.IService;
+import tn.esprit.entities.Produit;
 import tn.esprit.utils.Datasource;
 
 /**
@@ -31,20 +32,23 @@ public class CPService implements IService<CommandeProduit>{
    
     
     public void ajouter(CommandeProduit p){
-        String req = "INSERT INTO `commandeproduit` (`productID`, `orderID`, `quantite`,`sommePrix`) VALUES (?,?,?,?)";
+        String req = "INSERT INTO `commandeproduit` (`productID`, `quantite`,`sommePrix`,`orderID`) VALUES (?,?,?,?)";
         
         try {
             pst = conn.prepareStatement(req);
             pst.setInt(1, p.getProductID());
-            pst.setInt(2, p.getOrderID());
-            pst.setInt(3, p.getQuantite());   
-            pst.setInt(4, p.getSommePrix());  
+            
+            pst.setInt(2, p.getQuantite());   
+            pst.setInt(3, p.getSommePrix());  
+            pst.setInt(4, p.getOrderID());
             pst.executeUpdate();
             System.out.println("CommandeProduit ajoutée");
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
     }
+    
+
     
     @Override
     public List<CommandeProduit> afficher(){
@@ -58,10 +62,11 @@ public class CPService implements IService<CommandeProduit>{
             
             while(rs.next()){
                 CommandeProduit c = new CommandeProduit();
+                c.setCpID(rs.getInt(1) );
                 c.setProductID( rs.getInt("productID") );
-                c.setOrderID(rs.getInt(2));
                 c.setQuantite(rs.getInt(3));
                 c.setSommePrix(rs.getInt(4));
+                c.setOrderID(rs.getInt(5));
                 commandes.add(c);
             }
         } catch (SQLException ex) {
@@ -72,6 +77,25 @@ public class CPService implements IService<CommandeProduit>{
         return commandes;
     }
 
+        public int somme() {
+        int result=0;
+        List<CommandeProduit> cps = new ArrayList<>();
+        String req = "SELECT * from `commandeproduit`";
+        try {
+            pst = conn.prepareStatement(req);
+            ResultSet rs= pst.executeQuery();
+            
+            while(rs.next()){
+                result=result+rs.getInt("sommePrix");
+                
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return result;
+    }
+    
+    
     @Override
     public void supprimer(int id) {
         String req = "DELETE From commandeproduit WHERE cpID =" + id + ";";
@@ -83,10 +107,23 @@ public class CPService implements IService<CommandeProduit>{
             System.out.println(ex.getMessage());
         }
     }
+    
+        public void clear() {
+        String req = "DELETE From `commandeproduit` ;";
+        try {
+            pst = conn.prepareStatement(req);
+            pst.executeUpdate();
+            System.out.println("tout est supprimé");
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
 
+    
+    
     @Override
     public void modifier(CommandeProduit entity, int id) {
-            String req = "UPDATE `commandeproduit` SET `productID`='"+ entity.getProductID() + "' ,`orderID`='"+ entity.getOrderID()+"',`quantite`='"+ entity.getQuantite()+"',`sommePrix`='"+ entity.getSommePrix() +"' WHERE cpID=" + id +";";
+            String req = "UPDATE `commandeproduit` SET `productID`='"+ entity.getProductID() +"',`quantite`='"+ entity.getQuantite()+"',`sommePrix`='"+ entity.getSommePrix()+ "' ,`orderID`='"+ entity.getOrderID() +"' WHERE cpID=" + id +";";
         try {
             ste = conn.createStatement();
             ste.executeUpdate(req);

@@ -33,23 +33,29 @@ public class Main {
         CPService cps = new CPService();
         Produit p = new Produit("pull rouge","vetement","Nike",40,6);
         Produit g = new Produit("pull orange","Adidas","vetement",30,10);
-        Commande c = new Commande("Taher",3,10);
-        Commande c2 = new Commande("Maher",5,20);
-        CommandeProduit cp1 = new CommandeProduit(1,2,50,60);
+        Commande c = new Commande("Taher");
+        Commande c2 = new Commande("Maher");
+        CommandeProduit cp1 = new CommandeProduit(41,50,60,14);
         
         //ps.ajouterPst(p);
         //ps.modifier(g, 5);
-        System.out.println( ps.afficher() );
+        //System.out.println( ps.afficher() );
+       // System.out.println( ps.RechercheProd("'sdg'") );
+        //System.out.println( ps.RechercheProd2(7) );
+        //System.out.println( ps.compter("Fnatic") );
+        //System.out.println( ps.RechercheProduit(41) );
         //ps.supprimer(9);
         
-        //cps.ajouter(cp1);
+        cps.ajouter(cp1);
         //cps.supprimer(4);
-        //System.out.println( cps.afficher() );
+        System.out.println( cps.afficher() );
+        System.out.println( cps.somme() );
 
-       //cs.ajouterCmd(c); 
+       //cs.ajouterCmd(c2) ;
        //cs.modifier(c2,8);
        //cs.supprimer(10);
        //System.out.println(cs.afficher());
+       //System.out.println(cs.lastid());
        
        
     }

@@ -30,7 +30,7 @@ public class CommandeService implements IService<Commande>{
     
   //  @Override
     public void ajouter(Commande p){
-        String req = "INSERT INTO `commande` (`client`, `productID`, `quantite`) VALUES ('"+ p.getClient() +"','"+ p.getProductID() +"','"+ p.getQuantite()+"')";
+        String req = "INSERT INTO `commande` (`client`) VALUES ('"+ p.getClient() +"')";
         
         try {
             ste = conn.createStatement();
@@ -43,13 +43,11 @@ public class CommandeService implements IService<Commande>{
     
     
     public void ajouterCmd(Commande p){
-        String req = "INSERT INTO `commande` (`client`, `productID`, `quantite`) VALUES (?,?,?)";
+        String req = "INSERT INTO `commande` (`client`) VALUES (?)";
         
         try {
             pst = conn.prepareStatement(req);
-            pst.setString(1, p.getClient());
-            pst.setInt(2, p.getProductID());
-            pst.setInt(3, p.getQuantite());            
+            pst.setString(1, p.getClient());        
             pst.executeUpdate();
             System.out.println("Commande ajoutée");
         } catch (SQLException ex) {
@@ -71,8 +69,6 @@ public class CommandeService implements IService<Commande>{
                 Commande c = new Commande();
                 c.setOrderID( rs.getInt("orderID") );
                 c.setClient(rs.getString(2));
-                c.setProductID(rs.getInt(3));
-                c.setQuantite(rs.getInt(4));
                 commandes.add(c);
             }
         } catch (SQLException ex) {
@@ -95,9 +91,22 @@ public class CommandeService implements IService<Commande>{
         }
     }
 
+    public int lastid() {
+        int result = -1;
+        String req = "SELECT * FROM commande WHERE orderID = (SELECT MAX(orderID) FROM commande)";
+        try {
+            pst = conn.prepareStatement(req);
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()){
+            result = rs.getInt(1);}
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return result;
+    }
     @Override
     public void modifier(Commande entity, int id) {
-            String req = "UPDATE `commande` SET `client`='"+ entity.getClient()+"' ,`productID`='"+ entity.getProductID()+"',`quantite`='"+ entity.getQuantite() +"' WHERE orderID=" + id +";";
+            String req = "UPDATE `commande` SET `client`='"+ entity.getClient()+";";
         try {
             ste = conn.createStatement();
             ste.executeUpdate(req);

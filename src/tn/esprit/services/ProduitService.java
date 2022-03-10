@@ -111,7 +111,110 @@ public class ProduitService implements IService<Produit>{
         
         return produits;
     }
+    public List<Produit> RechercheProd(String S) {
+        List<Produit> produits = new ArrayList<>();
 
+        String req = "SELECT * from `produit` WHERE `nom` LIKE " + S;
+
+        try {
+            pst = conn.prepareStatement(req);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Produit p = new Produit();
+                p.setProductId(rs.getInt(1));
+                p.setNom(rs.getString(2));
+                p.setMarque(rs.getString(4));
+                p.setType(rs.getString(3));
+                p.setQuantite(rs.getInt("quantite"));
+                p.setPrix(rs.getInt(6));
+                produits.add(p);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        return produits;
+    }
+        public List<Produit> RechercheProdId(int s) {
+        List<Produit> produits = new ArrayList<>();
+
+        String req = "SELECT * from `produit` WHERE `productID` LIKE " + s;
+
+        try {
+            pst = conn.prepareStatement(req);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Produit p = new Produit();
+                p.setProductId(rs.getInt(1));
+                p.setNom(rs.getString(2));
+                p.setMarque(rs.getString(4));
+                p.setType(rs.getString(3));
+                p.setQuantite(rs.getInt("quantite"));
+                p.setPrix(rs.getInt(6));
+                produits.add(p);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        return produits;
+    }
+    
+    public List<Produit> RechercheProd2(int prix) {
+        List<Produit> produits = new ArrayList<>();
+
+        String req = "SELECT * from `produit` WHERE `prix` < " + prix;
+
+        try {
+            pst = conn.prepareStatement(req);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Produit p = new Produit();
+                p.setProductId(rs.getInt(1));
+                p.setNom(rs.getString(2));
+                p.setMarque(rs.getString(4));
+                p.setType(rs.getString(3));
+                p.setQuantite(rs.getInt("quantite"));
+                p.setPrix(rs.getInt(6));
+                produits.add(p);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        return produits;
+    }
+    
+    public Produit RechercheProduit(int i) {
+        List<Produit> produits = new ArrayList<>();
+
+        String req = "SELECT * from `produit` WHERE `productID` LIKE " + i;
+
+        try {
+            pst = conn.prepareStatement(req);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Produit p = new Produit();
+                p.setProductId(rs.getInt(1));
+                p.setNom(rs.getString(2));
+                p.setMarque(rs.getString(4));
+                p.setType(rs.getString(3));
+                p.setQuantite(rs.getInt("quantite"));
+                p.setPrix(rs.getInt(6));
+                produits.add(p);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        return produits.get(0);
+    }
+    
+    
     @Override
     public void supprimer(int id) {
         String req = "DELETE From produit WHERE productID =" + id + ";";
@@ -122,6 +225,31 @@ public class ProduitService implements IService<Produit>{
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
+    }
+
+    public int compter(String S) {
+        int result=0;
+        List<Produit> produits = new ArrayList<>();
+        String req = "SELECT * from `produit` WHERE marque= '"+S+"'";
+        try {
+            pst = conn.prepareStatement(req);
+            ResultSet rs= pst.executeQuery();
+            
+            while(rs.next()){
+                Produit p = new Produit();
+                p.setProductId(rs.getInt(1));
+                p.setNom(rs.getString(2));
+                p.setMarque(rs.getString(4));
+                p.setType(rs.getString(3));
+                p.setQuantite(rs.getInt("quantite"));
+                p.setPrix(rs.getInt(6));
+                produits.add(p);
+                result++;
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return result;
     }
 
     @Override

@@ -6,16 +6,12 @@
 package tn.esprit.gui;
 
 import java.io.IOException;
-import tn.esprit.entities.Produit;
-import tn.esprit.services.ProduitService;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.*;
-import javafx.fxml.*;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -24,13 +20,12 @@ import javafx.stage.Stage;
  *
  * @author ramyc
  */
-public class ProductWindow extends Application {
+public class CommandeProd extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("AjouterProd.fxml"));
+                try {
+            Parent root = FXMLLoader.load(getClass().getResource("CommandeProd.fxml"));
             Scene scene = new Scene(root, 600, 550);
            // scene.getStylesheets().add("C:\\Users\\ramyc\\Desktop/style.css");
             primaryStage.setTitle("Hello World!");
@@ -39,7 +34,6 @@ public class ProductWindow extends Application {
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
-
     }
 
     /**
@@ -47,7 +41,6 @@ public class ProductWindow extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-
     }
     
 }

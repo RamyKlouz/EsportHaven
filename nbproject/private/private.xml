@@ -3,7 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/gui/ModifProdController.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/entities/Commande.java</file>
             <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/gui/AjouterProdController.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/gui/ProductWindow.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/tests/Main.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/utils/Datasource.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/services/ProduitService.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/gui/AjouterProd.fxml</file>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/services/CommandeService.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/gui/ModifProd.fxml</file>
+            <file>file:/C:/Users/ramyc/Desktop/PiJava/EsportHaven/src/tn/esprit/entities/CommandeProduit.java</file>
         </group>
     </open-files>
 </project-private>

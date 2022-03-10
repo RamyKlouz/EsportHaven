@@ -11,14 +11,12 @@ package tn.esprit.entities;
 public class Commande {
     private int orderID;
     private String client; 
-    private int productID;
-    private int quantite;
 
-    public Commande(int orderID, String client, int productID, int quantite) {
+
+    public Commande(int orderID, String client) {
         this.orderID = orderID;
         this.client = client;
-        this.productID = productID;
-        this.quantite = quantite;
+
         
         
     }
@@ -26,10 +24,9 @@ public class Commande {
     public Commande() {
     }
 
-    public Commande(String client, int productID, int quantite) {
+    public Commande(String client) {
         this.client = client;
-        this.productID = productID;
-        this.quantite = quantite;
+
     }
 
     public int getOrderID() {
@@ -48,25 +45,10 @@ public class Commande {
         this.client = client;
     }
 
-    public int getProductID() {
-        return productID;
-    }
-
-    public void setProductID(int productID) {
-        this.productID = productID;
-    }
-
-    public int getQuantite() {
-        return quantite;
-    }
-
-    public void setQuantite(int quantite) {
-        this.quantite = quantite;
-    }
-
+    
     @Override
     public String toString() {
-        return "Commande{" + "orderID=" + orderID + ", client=" + client + ", productID=" + productID + ", quantite=" + quantite + '}';
+        return "Commande{" + "orderID=" + orderID + ", client=" + client + '}';
     }
 
    

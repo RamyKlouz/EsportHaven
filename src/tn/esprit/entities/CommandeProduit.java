@@ -18,14 +18,14 @@ public class CommandeProduit {
     public CommandeProduit() {
     }
 
-    public CommandeProduit(int productID, int orderID, int quantite, int sommePrix) {
+    public CommandeProduit(int productID,  int quantite, int sommePrix,int orderID) {
         this.productID = productID;
         this.orderID = orderID;
         this.quantite = quantite;
         this.sommePrix = sommePrix;
     }
 
-    public CommandeProduit(int cpID, int productID, int orderID, int quantite, int sommePrix) {
+    public CommandeProduit(int cpID, int productID, int quantite, int sommePrix, int orderID) {
         this.cpID = cpID;
         this.productID = productID;
         this.orderID = orderID;
@@ -76,8 +76,8 @@ public class CommandeProduit {
     @Override
     public String toString() {
         return "CommandeProduit{" + "cpID=" + cpID + ", productID="
-                + productID + ", orderID=" + orderID + ", quantite="
-                + quantite + ", sommePrix=" + sommePrix + '}';
+                + productID +  ", quantite="
+                + quantite + ", sommePrix=" + sommePrix + ", orderID=" + orderID + '}';
     }
     
     

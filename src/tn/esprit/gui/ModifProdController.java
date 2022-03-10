@@ -41,7 +41,12 @@ public class ModifProdController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ProduitService ps = new ProduitService();
+        tfnomprod.setText(ps.RechercheProduit(AjouterProdController.idtomodif).getNom());
+        tftype.setText(ps.RechercheProduit(AjouterProdController.idtomodif).getType());
+        tfmarque.setText(ps.RechercheProduit(AjouterProdController.idtomodif).getMarque());
+        tfquanprod.setText(Integer.toString(ps.RechercheProduit(AjouterProdController.idtomodif).getQuantite()));
+        tfprix.setText(Integer.toString(ps.RechercheProduit(AjouterProdController.idtomodif).getPrix()));
     }    
 
     @FXML
@@ -54,6 +59,7 @@ public class ModifProdController implements Initializable {
         p.setQuantite(Integer.parseInt(tfquanprod.getText()));
         p.setPrix(Integer.parseInt(tfprix.getText()));
         ps.modifier(p,AjouterProdController.idtomodif);
+        
     }
     
 }
