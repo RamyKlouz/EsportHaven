@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+      <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="550.0" prefWidth="900.0" GridPane.columnIndex="1">
+            <children>
+                <VBox layoutX="25.0" layoutY="88.0" prefHeight="246.0" prefWidth="108.0" spacing="32.0">
+                    <children>
+                        <Label text="Nom" />
+                        <Label prefHeight="17.0" prefWidth="72.0" text="NBjoueur" />
+                  <Button mnemonicParsing="false" onAction="#PDF" text="PDF" />
+                    </children>
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="14.0" />
+                    </padding>
+                </VBox>
+                <VBox layoutX="115.0" layoutY="99.0" prefHeight="117.0" prefWidth="100.0" spacing="24.0">
+                    <children>
+                        <TextField fx:id="tfNom" />
+                        <TextField fx:id="tfNbr" />
+                    </children>
+                </VBox>
+                <TableView fx:id="tvequipe" layoutX="231.0" layoutY="88.0" onMouseClicked="#mousebtn" prefHeight="224.0" prefWidth="325.0">
+                    <columns>
+                        <TableColumn fx:id="colID" prefWidth="91.20001220703125" text="identifiant" />
+                        <TableColumn fx:id="colNom" prefWidth="78.39996337890625" text="Nom" />
+                        <TableColumn fx:id="colNbr" prefWidth="122.20004272460938" text="Nombre de joueur " />
+                    </columns>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                </TableView>
+                <Button fx:id="btninsert" layoutX="115.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="67.0" text="Insert" />
+                <Button fx:id="btnupdate" layoutX="197.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="67.0" text="Update" />
+                <Button fx:id="btndelete" layoutX="280.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="67.0" text="delete" />
+            <Button layoutX="18.0" layoutY="399.0" mnemonicParsing="false" onAction="#SignupOnAction" text="AjouterJoueur" />
+            <VBox layoutX="633.0" prefHeight="550.0" prefWidth="270.0" style="-fx-background-color: #4F8AFF;" />
+            <Label layoutX="394.0" layoutY="403.0" prefHeight="18.0" prefWidth="50.0" text="selection" />
+            <TextField fx:id="tfid" layoutX="445.0" layoutY="400.0" />
+            <HBox layoutX="-11.0" layoutY="18.0" prefHeight="55.0" prefWidth="646.0" style="-fx-background-color: #4F8AFF;" />
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>
