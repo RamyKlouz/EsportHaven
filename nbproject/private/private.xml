@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="g1">
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/Main/Main.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/MotdepasseFXMLController.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/ListeUtilisateursFXML.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/entities/utilisateur.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/CreateAccountFXML.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/AjouterCompteFXML.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/CreateAccountFXMLController.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/HomeUserFXLM.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/MotdepasseFXML.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/ListeUtilisateursFXMLControler.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/resources/HomeUsFXML.fxml</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/HomeUserFXMLController.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/resources/MotdepasseFXML.fxml</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/views/AjouterCompteFXMLController.java</file>
+            <file>file:/C:/Users/21654/Desktop/appfinal/src/services/UtilisateurService.java</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/utils/Datasource.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/views/CreateAccountFXMLController.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/utils/Main.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/entities/utilisateur.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/views/HomeUserFXMLController.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/views/ListeUtilisateursFXMLControler.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/views/MotdepasseFXMLController.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/views/AjouterCompteFXML.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/views/AjouterCompteFXMLController.java</file>
+            <file>file:/C:/Users/ramyc/Desktop/appfinal/src/services/UtilisateurService.java</file>
+        </group>
+    </open-files>
+</project-private>
