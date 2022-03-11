@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="458.0" prefWidth="600.0" style="-fx-background-color: #471574;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ModifierpartieController">
+   <children>
+      <TextField fx:id="tfidtour" layoutX="192.0" layoutY="110.0" promptText="id tournoi" />
+      <TextField fx:id="tfsc1" layoutX="58.0" layoutY="248.0" promptText="Score d'équipe 1" />
+      <TextField fx:id="tfDuree" layoutX="344.0" layoutY="182.0" promptText="durée" />
+      <TextField fx:id="tfideq1" layoutX="344.0" layoutY="248.0" promptText="ID de l'équipe 1" />
+      <TextField fx:id="tfideq2" layoutX="344.0" layoutY="330.0" promptText="ID de l'équipe 2" />
+      <TextField fx:id="tfsc2" layoutX="58.0" layoutY="330.0" promptText="Score d'éuipe 2" />
+      <DatePicker fx:id="tfDateDer" layoutX="61.0" layoutY="182.0" promptText="Date du déroulement" />
+      <Label layoutX="59.0" layoutY="227.0" text="Score d'équipe 1" textFill="WHITE" />
+      <Label layoutX="59.0" layoutY="309.0" text="Score d'équipe 2" textFill="WHITE" />
+      <Label layoutX="344.0" layoutY="309.0" text="ID Equipe 2" textFill="WHITE" />
+      <Label layoutX="344.0" layoutY="227.0" text="ID Equipe 1" textFill="WHITE" />
+      <Label layoutX="64.0" layoutY="157.0" text="Date du déroulement" textFill="WHITE" />
+      <Button fx:id="tfajoupar" layoutX="205.0" layoutY="386.0" mnemonicParsing="false" onAction="#ajouterpartie" style="-fx-background-color: #EFEEF3;" text="Modifier une partie" />
+      <Label layoutX="55.0" layoutY="79.0" prefHeight="21.0" prefWidth="530.0" text="Veuillez remplir les champs ci-dessous pour  modifier  une partie" textFill="WHITE" />
+      <Label layoutX="357.0" layoutY="157.0" text="Duree : " textFill="WHITE" />
+   </children>
+</AnchorPane>
