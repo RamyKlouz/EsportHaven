@@ -123,7 +123,7 @@ public class AjouterSponsorController implements Initializable {
            TrayNotification tray = new TrayNotification();
             AnimationType type = AnimationType.POPUP;
             tray.setAnimationType(type);
-            tray.setTitle("Vous avez Ajouté un nouveau sponsor");
+            tray.setTitle("Vous avez ajouté un nouveau sponsor");
             tray.setMessage("");
             tray.setNotificationType(NotificationType.SUCCESS);
             tray.showAndDismiss(Duration.millis(3000));

@@ -104,7 +104,7 @@ public class AfficherBudgetController implements Initializable {
                             return true;
                         }
                         String lower = newValue.toLowerCase();
-                        if (budgets.getActivite().toLowerCase().contains(lower)) {
+                        if (budgets.getActivite().toLowerCase().contains(lower) ) {
                             return true;
                         }
 

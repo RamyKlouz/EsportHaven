@@ -21,7 +21,7 @@
                   <TableColumn fx:id="Duree_spons" minWidth="0.0" prefWidth="140.79996337890623" text="Duree Sponsorisation" />
               </columns>
             </TableView>
-            <Label layoutX="330.0" text="Sponsors" textFill="#471574">
+            <Label layoutX="143.0" text="Sponsors E-Sport Haven" textFill="#471574">
                <font>
                   <Font name="Californian FB Bold" size="60.0" />
                </font>

@@ -108,7 +108,7 @@ public class AfficherSponsorsController implements Initializable {
                             return true;
                         }
                         String lower = newValue.toLowerCase();
-                        if (Sponsorss.getNom_Sponsor().toLowerCase().contains(lower)) {
+                        if (Sponsorss.getNom_Sponsor().toLowerCase().contains(lower) || Sponsorss.getPrenom_Sponsor().toLowerCase().contains(lower)) {
                             return true;
                         }
 

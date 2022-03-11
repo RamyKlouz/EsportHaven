@@ -66,19 +66,18 @@ public class UserAffichageController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         SponsorsCRUD pss = new SponsorsCRUD();
-        ArrayList<Sponsors> c = new ArrayList<>();
+        ArrayList<Sponsors> v = new ArrayList<>();
         try {
-            c = (ArrayList<Sponsors>) pss.AfficherSponsors();
+            v = (ArrayList<Sponsors>) pss.AfficherSponsors();
         } catch (SQLException ex) {
             Logger.getLogger(AfficherSponsorsController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        ObservableList<Sponsors> obs2 = FXCollections.observableArrayList(c);
-        tableview.setItems(obs2);
+        ObservableList<Sponsors> obs5 = FXCollections.observableArrayList(v);
+        tableview.setItems(obs5);
       
- Nom_Sponsor.setCellValueFactory(new PropertyValueFactory<>("Nom_Sponsor"));
+        Nom_Sponsor.setCellValueFactory(new PropertyValueFactory<>("Nom_Sponsor"));
         Prenom_Sponsor.setCellValueFactory(new PropertyValueFactory<>("Prenom_Sponsor"));
-        
         Montant.setCellValueFactory(new PropertyValueFactory<>("Montant"));
         Duree_spons.setCellValueFactory(new PropertyValueFactory<>("Duree_spons"));
              
